@@ -1,0 +1,655 @@
+﻿@{
+  Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Mitteilungen";   
+}
+<hgroup class="title">
+    
+    
+</hgroup>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"/>
+<link href="~/animated_favicon1.gif" rel="animated_favicon1 ico" type="image/x-icon"/>
+
+<script type="text/javascript" charset="iso-8859-2" src="news.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="content-type" content="text/html; charset=iso-8859-2" />
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
+<style>
+.city {display:none}
+</style>
+
+<link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'/>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css"/><style>
+html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif;}
+.w3-sidenav a {padding:16px;}
+</style>
+        <style>
+       title{
+        display: none;        
+            }
+
+       ol {
+        list-style-type:none;
+        padding:36px;
+        margin:auto;
+        width: 100%;
+        font-size:14px;
+        height:02em;
+        line-height:1em;
+        text-align:center;
+        background: none;
+        float: left;
+        position: fixed;
+        background-image:url(cats2.jpg);
+        z-index: 1;
+        display: flexbox;
+        top: 0;
+        left: 0;
+        right: 0;
+ }
+div.ex2 {
+    max-width:500px;
+    margin: auto;
+    border: 3px solid #73AD21;
+}
+      ol a {
+        display:inline;
+        text-decoration:none;
+        background: none;
+        width: 70px;
+      }
+a:hover, a:active{
+    background: none;
+}
+        ol > li {
+            float: left;
+            width: 90px;
+            margin-left: 1px;
+            background: none;
+  }
+        ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+       img src{
+            border-radius: 0px 0px 0px 0px;
+            position: absolute;
+            left: 300px;
+            top: 0px;
+            z-index: 1;
+           
+        top: 0;
+        left: 0;
+        right: 0;
+        }
+     /* wygląd elementu - li - pierwszego dziecka elementu - ol */
+      ol > li:first-child {
+        margin-left:0;
+        background: none;
+      }
+
+      /* wygląd elementów - li - wszystkich dzieci elementu - ol - po najechaniu kursorem myszki na element - li */
+      ol > li:hover {
+        background: none;
+      }
+
+      /* wygląd elementu - a - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+      ol > li:hover > a {
+        color:#09C;
+        background: none;
+      }
+
+      /* wygląd elementu - ul - dziecka elementu - li - będącego dzieckiem elementu - ol - po najechaniu kursorem myszki na element - li */
+      ol > li:hover > ul {
+        display:block;
+        margin: 10px;
+        background-color:#FFF;
+        border-radius: 2px 2px 2px 2px;
+      }
+        a{
+            background: none;
+        } 
+    /* ------------------------CZĘŚĆ-ROZWIJANA-MENU------------------------ */
+
+      /* wygląd głównych rozwijanych elementów - ul */
+      ol > li > ul {
+        display:none;
+        list-style-type:none;
+        padding:0;
+        margin:0;
+        background: none;
+        
+      }
+
+      /* wygląd elementu - li - w części rozwijanej */
+      ol > li > ul > li {
+        position:relative;
+        background: none;
+      }
+
+      /* wygląd elementu - a - w części rozwijanej */
+      ol > li > ul > li > a {
+       background: none; 
+      }
+
+      /* wygląd elementu - li - w części rozwijanej, po najechaniu kursorem myszki na dany element - li */
+      ol > li > ul > li:hover {
+        background: none;
+      }
+
+      /* wygląd elementu - a - w części rozwijanej, po najechaniu kursorem myszki na element - li */
+      ol > li > ul > li:hover > a {
+        color:#09C;
+
+        background: none;
+        text-decoration: underline;
+      }  
+
+     ul class socials{
+        display:none;
+        list-style-type:none;
+        padding:0;
+        margin:0;
+        background: none;
+        box-shadow: 1px 1px 1px 1px #808080;
+        }
+    
+#nav {
+    background-color:#eeeeee;
+    width:242px;
+    float:left;
+    text-align: center;
+    resize: vertical;
+    border-radius: 5px 5px 5px 5px;
+    border: 001px solid lightblue;
+    resize: vertical;
+    background-color: #FFF;
+    float: right;
+    float: left;
+    margin: auto;
+    height: auto;       
+}
+           
+          .flex-item{
+          background-color: #0ff;
+          border-radius: 5px 5px 5px 5px;
+          height: 5px;
+          margin: 0px;
+          margin-top: 18px;
+          
+        }
+       
+        link rel{background-image:url("http://www.w3schools.com/lib/w3.css");
+        }
+        link rel {
+            background-image: url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css);
+        }
+         
+        socials{
+            width: 120px;
+            padding:0 100px;
+            height: 60px;
+        }
+ a.ex8:hover, a.ex8:active {color: #0ff;}           
+    </style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<script>
+    function myFunction() {
+        var myStarteSite = strona.dla.uzytkownika.open
+        ev.preventStronaDlaUzytkownika(document.getElementById(Date));
+    }
+
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '785616684827268',
+      xfbml      : true,
+      version    : 'v2.2'
+    });
+
+    // ADD ADDITIONAL FACEBOOK CODE HERE
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '888655561210014',
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>   
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.5&appId=888655561210014";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+       
+
+         <script>
+            window.omepos = (function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                t = window.omepos || {};
+                if (d.getElementById(id)) return t;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "http://localhost:37328/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs)
+                t._e = [];
+                t.ready = function (f) {
+                    t._e.push(f);
+                };
+
+                return t;
+                }(document, "script", "omepos-wjs"));
+
+            
+        </script>
+  <script type="text/javascript">
+  //<!--
+  $(document).ready(function() {
+    $(".w2bslikebox").hover(function() {
+      $(this).stop().animate({
+        right: "0"}
+                             , "medium");
+    }, function() {
+      $(this).stop().animate({
+        right: "-250"}
+                             , "medium");
+    }, 500);
+  });
+  
+</script>
+        </head>
+
+ 
+<!-- Remember to add more information here -->
+
+<!-- Do not display this at the moment
+ <img border="0" src="/images/pulpit.jpg" alt="Pulpit rock" width="304" height="228">
+ -->   
+
+<body>
+ <div id="cse-search-results">
+<script type="text/javascript">
+  var googleSearchIframeName = "cse-search-results";
+  var googleSearchFormName = "cse-search-box";
+  var googleSearchFrameWidth = 600;
+  var googleSearchDomain = "www.google.com";
+  var googleSearchPath = "/cse";
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script  type = "text/javascript"  src = "https://apis.google.com/js/plusone.js" ></script> 
+<g:plus  href = "https://plus.google.com/ {profileId} "  rel = "author"style="background-repeat: no-repeat;
+    background-attachment: fixed;z-index: 1" ></g:plus>
+ <!-- Fügen Sie dieses Tag an der Stelle ein, an der die Widget erscheinen soll. -->
+ <!-- Google CSE Search Box Begins -->
+ <!-- Use of this code assumes agreement with the Google Custom Search Terms of Service. -->
+ <!-- The terms of service are available at https://www.google.com/support/customsearch/bin/answer.py?answer=1714300 -->
+ <form action="http://www.guha.com/results.html" id="cref_iframe">
+ <input name="cref" type="hidden" value="http://www.guha.com/cref_cse.xml">
+ <input name="cof" type="hidden" value="FORID:9">
+ </form>
+ <script src="'/cse'/brand'?form='cref_iframe" type="text/javascript"></script>
+ <!-- Google CSE Search Box Ends --> 
+
+<script type="text/javascript" src="//www.google.com/afsonline/show_afs_search.js"></script>
+</div>     
+    
+  <div class="ex1">     
+  <ol>
+    <li><a href="~/Account.cshtml"></a>
+    <li><a href="~/strona po wylogowaniu">Starter</a>
+    <ul class='flex-item'style="background-color: #0ff;width: 90px;margin-left: 0">
+        <li class="flex-item"></li>
+    </ul>  
+
+    <li><a href="~/Mitteilungen.cshtml">Mitteilungen</a>
+     <ul class='flex-item'style="background-color: #0ff;width: 90px;margin-left: auto">
+         <li class="flex-item"></li>
+         
+   </ul>
+    <li><a href="~/Entdecken.cshtml">Entdeken</a>
+    <ul class='flex-item'style="background-color: #0ff;width: 90px;margin-left: auto">
+         <li class="flex-item"></li>
+
+   </ul>
+     <li><a class="emaill" href="~/Account/Manage" title="Manage"style="margin-left:330px">@WebSecurity.CurrentUserName</a>
+        
+        
+        <li><a href="#search"><form action="https://cse.google.com/" id="cref">
+ <input name="cref" type="hidden" value="http://www.guha.com/cref_cse.xml">
+  <input name="q" size="40" type="text"style="position:absolute;border-radius:50px 50px 50px 50px;margin-top: -30px;width: 220px;margin-left: -80px">
+ <input name="sa" type="submit" value=""style="position:absolute;border-radius:50px 50px 50px 50px;margin-top: -22px;line-height:0em;margin-left: 120px"class="ex8"><i class="material-icons">zoom_out</i>
+ </form></a>
+       
+         <li><a class="ex4"><i class="fa fa-ellipsis-h"style="margin-left: 80px;margin-top: 10px"></i></a> 
+             <ul class='socials'style="box-shadow: 1px 1px 1px 1px #808080; width: 150px;text-align: center;height:200px;line-height: 1.8;margin-top: 30px;margin-left: 29px">
+        <li><a href="~/Account.cshtml"></a>
+        <li><a href="pinterest.cshtml">Pinterest</a></li>
+        <li><a href="Photos.cshtml"></a></li>
+        <li><a href="mojaZakladka">Zakladka</a></li>
+        <li><a href="strona dla uzytkownika">Dom</a></li>
+        <li><a href="strona po wylogowaniu.cshtml">Abmelden</a></li>
+        <li><a href="https://twitter.com/intent/tweet?partner=archive"title="Neuen Tweet verfassen" target="_blank"><span class="hidden-elements">Neuen Tweet</span></a></li>
+        </ul>
+            </ol>
+              </div>
+    <h1 id="fb-welcome"style="margin-left: 70px"></h1>
+    <script>
+    // Place following code after FB.init call.
+
+function onLogin(response) {
+  if (response.status == 'connected') {
+    FB.api('/me?fields=first_name', function(data) {
+      var welcomeBlock = document.getElementById('fb-welcome');
+      welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
+    });
+  }
+}
+
+FB.getLoginStatus(function(response) {
+  // Check login status on load, and if the user is
+  // already logged in, go directly to the welcome message.
+  if (response.status == 'connected') {
+    onLogin(response);
+  } else {
+    // Otherwise, show Login dialog first.
+    FB.login(function(response) {
+      onLogin(response);
+    }, {scope: 'user_friends, email'});
+  }
+});
+</script>    
+ <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="true" data-auto-logout-link="true"style="margin-top:-10px;margin-left: 720px "></div>         
+<a href="https://docs.google.com/spreadsheets/d/1PZeg7YjUJc6STzUuFfxS-d-NGlIq1moYOSTXwqjvIKM/edit?disco=AAAAAZIkHlQ#gid=1926283201"></a>   
+  <div id="cse-search-results">
+<script type="text/javascript">
+  var googleSearchIframeName = "cse-search-results";
+  var googleSearchFormName = "cse-search-box";
+  var googleSearchFrameWidth = 600;
+  var googleSearchDomain = "www.google.com";
+  var googleSearchPath = "/cse";
+</script>
+
+
+<script type="text/javascript" src="//www.google.com/afsonline/show_afs_search.js"></script>
+</div>
+   
+    <iframe src="https://snapwidget.com/embed/453800" class="snapwidget-widget" style="border:none; overflow:hidden; width:225px; height:225px;margin-left: 45px;margin-top:-80px "></iframe>
+    
+   
+   <form action="#" method="post" enctype="multipart/form-data">
+         </form>
+   
+     <a class="emaill" href="~/Account/Manage" title="Manage"style="visibility: hidden">@WebSecurity.CurrentUserName</a>
+    <div class="content-wrapper"></div>
+    <div class="float-left">
+                    
+                    </div>
+
+       <div id="nav"style="margin-top: -30px;margin-left: 40px">
+    <div id="div"class="one">
+     <a style="color: #808080;font-size: 12px" href="Default.cshtml"><p>&copy; @DateTime.Now.Year - Copyright ome!pos</a>
+        <a style="color: #09C;font-size: 12px" href="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg">twitter:image.</a>
+        
+        <a style="color: #09C;font-size: 12px" href="http://bits.blogs.nytimes.com/2011/12/08/a-twitter-for-my-sister/">blogs.</a>  
+    
+           <a style="color: #09C;font-size: 12px" href="http://graphics8.nytimes.com/images/2011/12/08/technology/bits-newtwitter/bits-newtwitter-tmagArticle.jpg">image.</a>
+        <a style="color: #09C;font-size: 12px" href="http://www.w3schools.com/w3css/default.asp">w3schools.</a>
+        <a style="color: #09C;font-size: 12px" href="http://www.asp.net/web-pages/overview/getting-started/13-adding-social-networking-to-your-web-site">asp.net.</a>
+        <a style="color: #09C;font-size: 12px" href="https://myaccount.google.com/privacy?pli=1">myaccount.</a>
+            <a style="color: #09C;font-size: 12px" href="http://bloog.pl/logowanie.html?url=http%3A%2F%2Fbloog.pl%2Fadm_lista_wpisow.html%3F&smoybbtticaid=5167b2">bloog.pl.</a>
+        <a style="color: #09C;font-size: 12px" href="http://ulub.pl/">ulubione.</a>
+        <a style="color: #09C;font-size: 12px" href="http://www.microsoft.com/web/webmatrix/">webmatrix.</a>
+        <a style="color: #09C;font-size: 12px" href="https://en.gravatar.com/site/login#contact-information">gravatar.</a>  
+    </div>
+    </div>
+    <div class="w3-container"style="position: fixed;">
+        <a class="w3-btn-floating w3-ripple w3-teal"href="#top"style="margin-left: 850px;opacity:0.6">+</a>
+    </div> 
+    <div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+       <div id="nav"style="margin-left: -242px;margin-top: 100px;width: 242px;background-color: #cff3e7;color: #55bc49; resize: vertical;"><div class="fb-page" data-href="https://www.facebook.com/technikautocad/" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"data-width="240"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/technikautocad/"><a href="https://www.facebook.com/technikautocad/">Technik Auto CAD</a></blockquote></div></div>
+<div id="fb-root"></div>
+    </div>
+      </div>
+        </div>
+    <!-- SnapWidget -->
+
+    <div class="container">
+    <div style="color: #09C;width: 420px;margin-left: 750px;margin-top: -390px;padding: 50px;background-image: url()"></div>
+    
+  </div>
+        <a data-pin-do="embedUser" data-pin-lang="de" data-pin-board-width="400" data-pin-scale-height="240" data-pin-scale-width="80"style="margin-left: 210px;margin-top: 10px" href="https://www.pinterest.com/grazynaselbach/"></a>
+        <div class="fb-page"
+  data-href="https://www.facebook.com/imdb"style="margin-left: 10px" 
+  data-width="400"
+  data-hide-cover="false"
+  data-show-facepile="true"></div>
+        <div id="fb-root"></div>
+<!-- Please call pinit.js only once per page -->
+<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+         <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.4&appId=888655561210014";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-36793796-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<div class="fb-post" data-href="https://localhost:37328" data-width="350"></div>
+<div class="fb-comments" data-href="http://localhost:37328" data-numposts="5" data-colorscheme="light"></div>
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.5&appId=785616684827268";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.5&appId=785616684827268";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    <div class="fb-follow" data-href="https://www.facebook.com/zuck" data-layout="standard" data-show-faces="true"></div>
+<div class="ex4">
+     <a href="~/fa fa-thumbs-up"></a><div id="vc-feelback-main" data-access-token="6d31f93bca9335598759477f73a050b0" data-display-type="4"></div><a href=""></a></div>
+ <div class="ex4">
+     <a href="~/fa fa-thumbs-up"></a><div id="vc-feelback-main" data-access-token="6d31f93bca9335598759477f73a050b0" data-display-type="4"></div><a href=""></a></div>
+ 
+<div class="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fapps.twitter.com%2F&ref_src=twsrc%5Etfw&text=Twitter%20Apps&tw_p=tweetbutton&url=https%3A%2F%2Fapps.twitter.com%2F&via=twitter"></div>
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Hello%20world"
+  data-size="large">
+Tweet</a><a class="twitter-follow-button"
+  href="https://twitter.com/GrazynaSelbach"
+  data-size="large">
+Follow</a>
+    <blockquote class="twitter-tweet" data-lang="en">
+  <p lang="en" dir="ltr"></p>&mdash;<a href="https://twitter.com/GrazynaSelbach"style=""></a>
+</blockquote></a> 
+        <script> 
+(function() { 
+var v = document.createElement('script'); v.async = true; 
+v.src = "http://assets-prod.vicomi.com/vicomi.js"; 
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(v, s); 
+})(); 
+</script></div>
+ 
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+    <script>twttr.events.bind(
+  'click',
+  function (ev) {
+    console.log(ev);
+  }
+);</script>
+    <script>
+        // Log any kind of Web Intent event to Google Analytics
+// Category: "twitter_web_intents"
+// Action: Intent Event Type
+// Label: Identifier for action taken: tweet_id, screen_name/user_id, click region
+ 
+// First, load the widgets.js file asynchronously
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));
+ 
+// Define our custom event handlers
+function clickEventToAnalytics (intentEvent) {
+  if (!intentEvent) return;
+  var label = intentEvent.region;
+  pageTracker._trackEvent('twitter_web_intents', intentEvent.type, label);
+}
+ 
+function tweetIntentToAnalytics (intentEvent) {
+  if (!intentEvent) return;
+  var label = "tweet";
+  pageTracker._trackEvent(
+    'twitter_web_intents',
+    intentEvent.type,
+    label
+  );
+}
+ 
+function likeIntentToAnalytics (intentEvent) {
+  tweetIntentToAnalytics(intentEvent);
+}
+ 
+function retweetIntentToAnalytics (intentEvent) {
+  if (!intentEvent) return;
+  var label = intentEvent.data.source_tweet_id;
+  pageTracker._trackEvent(
+    'twitter_web_intents',
+    intentEvent.type,
+    label
+  );
+}
+ 
+function followIntentToAnalytics (intentEvent) {
+  if (!intentEvent) return;
+  var label = intentEvent.data.user_id + " (" + intentEvent.data.screen_name + ")";
+  pageTracker._trackEvent(
+    'twitter_web_intents',
+    intentEvent.type,
+    label
+  );
+}
+ 
+// Wait for the asynchronous resources to load
+twttr.ready(function (twttr) {
+  // Now bind our custom intent events
+  twttr.events.bind('click', clickEventToAnalytics);
+  twttr.events.bind('tweet', tweetIntentToAnalytics);
+  twttr.events.bind('retweet', retweetIntentToAnalytics);
+  twttr.events.bind('like', likeIntentToAnalytics);
+  twttr.events.bind('follow', followIntentToAnalytics);
+});
+    </script>
+ 
+        <script> 
+(function() { 
+var v = document.createElement('script'); v.async = true; 
+v.src = "http://assets-prod.vicomi.com/vicomi.js"; 
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(v, s); 
+})(); 
+</script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '785616684827268',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+
+    // ADD ADDITIONAL FACEBOOK CODE HERE
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+</body>
