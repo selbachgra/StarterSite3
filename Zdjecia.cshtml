@@ -1,0 +1,395 @@
+﻿@{
+     Layout = "~/_SiteLayout.cshtml";
+  Page.Title = "Zdjęcia";
+   WebImage photos = null;
+    var newFileName = "";
+    var imagePath = "";
+
+    if(IsPost){
+        photos = WebImage.GetImageFromRequest();
+        if(photos != null){
+            newFileName = Guid.NewGuid().ToString() + "_" +
+                Path.GetFileName(photos.FileName);
+            imagePath = @"images\" + newFileName;
+            photos.Resize(width:60, height:60, preserveAspectRatio: true,
+               preventEnlarge: true);
+            photos.Save(@"~\" + imagePath);
+        }
+    }  
+}
+
+<hgroup class="title">
+    <h1></h1>
+</hgroup>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<style>
+* {
+    box-sizing: border-box;
+    border-radius: 10px 10px 10px 10px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.header {
+    text-align: center;
+    padding: 32px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.column img {
+    margin-top: 12px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+ .container {
+    position: relative;
+    width: 50%;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: relative;
+  top: -30px;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+ .container:hover .image {
+  opacity: 0.3;
+}
+.container:hover .middle {
+  opacity: 1;
+}
+.text {
+  background-color:#808080;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+ 
+}
+ .fa-facebook {
+        background: #b7bbc3;
+        color: white;
+    }
+    .fa-twitter {
+  background: #b7bbc3;
+  color: white;
+}
+ .fa-pinterest {
+  background: #b7bbc3;
+  color: white;
+}
+ .fa-instagram {
+  background: #b7bbc3;
+  color: white;
+}        
+ .fa {
+ 
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+    text{
+      font-family: 'Sofia';font-size: 33px;  
+    }
+                                     
+</style>
+<script>
+
+function showRSS(str) {
+  if (str.length==0) { 
+    document.getElementById("rssOutput").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+      document.getElementById("rssOutput").innerHTML=xmlhttp.responseText;
+    }
+  }
+  xmlhttp.open("GET","getrss.php?q="+str,true);
+  xmlhttp.send();
+}
+
+</script>
+    </head>
+    <body>
+<!-- Header -->
+<div class="header">
+  <h1><b style="font-family: 'Sofia';font-size: 30px; text-align: center;color: #f00">Galeria zdjęć</b></h1>
+  
+  <button onclick="four()"style="border-radius: 50%;">4</button>
+  <button onclick="two()"style="border-radius: 50%;">2</button>
+  <button onclick="one()"style="border-radius: 50%;">1</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+      <div class="container">
+      <img alt="#"src="P8030024.jpg" style="width:100%">
+      <div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+        <div class="container">
+      <img alt="#"src="P8030026.jpg" style="width:100%">
+       <div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+ </div></div>
+      <div class="container">
+    <img alt="#"src="P8030029.jpg" style="width:100%">
+           <div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+      <div class="container">
+    <img alt="#"src="P8060089.jpg" style="width:100%">
+          <div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+      <div class="container">
+    <img alt="#"src="P8060092.jpg" style="width:100%">
+           <div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+      <div class="container">
+    <img alt="#"src="P8060097.jpg" style="width:100%">
+          <div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+      </div>
+<div class="column">
+  <div class="container">
+    <img alt="#"src="P8060100.jpg" style="width:100%">
+      <div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+      <div class="container">
+    <img alt="#"src="P8060103.jpg" style="width:100%">
+<div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+      <div class="container">
+    <img alt="#"src="widok.jpg" style="width:100%">
+<div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+      <div class="container">
+    <img alt="#"src="korekta.jpg" style="width:100%">
+<div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+      <div class="container">
+    <img alt="#"src="korekta1.jpg" style="width:100%">
+<div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+      <div class="container">
+    <img alt="#"src="DSC_0137.jpg" style="width:100%">
+<div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div></div>
+    <div class="column">
+  <div class="container">  
+      <img alt="#"src="DSC_0100.jpg" style="width:100%">
+<div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+  
+      <div class="container">     
+    <img alt="#"src="DSC_0044.jpg" style="width:100%">
+<div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+      
+        <div class="container">
+    <img alt="#"src="20151101_163344.jpg" style="width:100%">
+<div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+ <div class="container">
+    <img alt="#"src="P8060098.jpg" style="width:100%">
+          <div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>           
+                <div class="container">
+    <img alt="#"src="20160319_121017.jpg" style="width:100%">
+<div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+         <div class="container">
+    <img alt="#"src="IMG-20171005-WA0011.jpg" style="width:100%">
+                        <div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div></div>
+  <div class="column">
+      <div class="container">
+    <img alt="#"src="IMG0006.jpg" style="width:100%">
+<div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+          <div class="container">
+    <img alt="#"src="IMG-20160611-WA0001.jpg" style="width:100%">
+<div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+          <div class="container">
+    <img alt="#"src="IMG-20160611-WA0003.jpg" style="width:100%">
+<div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+                  <div class="container">
+    <img alt="#"src="20161228_124835.jpg" style="width:100%">
+       <div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+                      
+      <div class="container">
+    <img alt="#"src="IMG-20171005-WA0001 (1).jpg" style="width:100%">
+  <div class="middle">
+<!-- Add font awesome icons -->
+<a href="https://www.facebook.com/technikautocad/"title="facebook" class="fa fa-facebook"></a>
+<a href="https://twitter.com/intent/tweet?text=Hello%20world"title="twitter" class="fa fa-twitter"></a>
+<a href="https://www.pinterest.de/"title="pinterest" class="fa fa-pinterest"></a>
+  </div></div>
+</div>
+  </div>
+
+
+<script>
+// Four images side by side
+function four() {
+    var elements = document.getElementsByClassName("column");
+    var i;
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "25%";
+    }
+}
+
+// Two images side by side
+function two() {
+    var elements = document.getElementsByClassName("column");
+    var i;
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "50%";
+    }
+}
+
+// Full-width images
+function one() {
+    var elements = document.getElementsByClassName("column");
+    var i;
+    for (i = 0; i < elements.length; i++) {
+        elements[i].style.width = "100%";
+    }
+}
+</script>
+        <a href="https://www.youtube.com/user/grazynaselbach/live"style="background: none">youtube</a>
+        <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/b07805dcd5f25ad8922d90ef2336617d.html" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+      <blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"><div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BabuMWgBiXc/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">Ein Beitrag geteilt von Grazyna Selbach(selbachgrazyna)</a>am<time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2017-10-19T14:35:38+00:00">19. Okt 2017 um 7:35 Uhr</time></p></div></blockquote><script async defer src="//platform.instagram.com/en_US/embeds.js"></script>  
+    </body>
+</html>
