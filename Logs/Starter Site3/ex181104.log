@@ -1,0 +1,149 @@
+#Software: Microsoft Internet Information Services 8.0
+#Version: 1.0
+#Date: 2018-11-04 09:44:04
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2018-11-04 09:44:04 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 10200
+2018-11-04 09:44:08 ::1 GET /screenshot-2.png - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) http://localhost:7184/ 200 0 0 15
+2018-11-04 09:44:08 ::1 GET /ome!pos.pgn.png - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) http://localhost:7184/ 200 0 0 91
+2018-11-04 09:44:09 ::1 GET /widok1.jpg - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) http://localhost:7184/ 200 0 0 23
+2018-11-04 09:44:12 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 4
+#Software: Microsoft Internet Information Services 8.0
+#Version: 1.0
+#Date: 2018-11-04 10:10:17
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2018-11-04 10:10:17 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 25172
+2018-11-04 10:10:20 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 10
+#Software: Microsoft Internet Information Services 8.0
+#Version: 1.0
+#Date: 2018-11-04 10:58:12
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2018-11-04 10:58:12 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 20
+2018-11-04 10:58:12 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 3
+#Software: Microsoft Internet Information Services 8.0
+#Version: 1.0
+#Date: 2018-11-04 11:54:21
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2018-11-04 11:54:21 ::1 GET / - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 128
+2018-11-04 11:54:21 ::1 GET /screenshot-2.png - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/ 200 0 0 48
+2018-11-04 11:54:21 ::1 GET /ome!pos.pgn.png - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/ 200 0 0 38
+2018-11-04 11:54:21 ::1 GET /widok1.jpg - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/ 200 0 0 56
+2018-11-04 11:54:23 ::1 GET /favicon.ico - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/ 404 0 2 224
+2018-11-04 11:55:00 ::1 GET /Account/Login - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/ 200 0 0 5078
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.all.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 77
+2018-11-04 11:55:00 ::1 GET /Account/ome!pos.pgn.png - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 404 0 2 88
+2018-11-04 11:55:00 ::1 GET /Content/Site.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 112
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.base.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 41
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.theme.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 79
+2018-11-04 11:55:00 ::1 GET /Scripts/jquery-1.8.2.min.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 391
+2018-11-04 11:55:00 ::1 GET /Scripts/jquery.validate.min.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 147
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.accordion.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 106
+2018-11-04 11:55:00 ::1 GET /Scripts/jquery.validate.unobtrusive.min.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 210
+2018-11-04 11:55:00 ::1 GET /Scripts/modernizr-2.6.2.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 514
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.autocomplete.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 97
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.button.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 64
+2018-11-04 11:55:00 ::1 GET /Scripts/jquery-ui-1.8.24.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 557
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.core.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 233
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.datepicker.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 73
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.dialog.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 84
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.resizable.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 55
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.progressbar.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 66
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.selectable.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 68
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.slider.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 49
+2018-11-04 11:55:00 ::1 GET /Content/themes/base/jquery.ui.tabs.css - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 76
+2018-11-04 11:55:02 ::1 GET /Images/accent.png - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Content/Site.css 200 0 0 7
+2018-11-04 11:55:05 ::1 GET /favicon.png - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 17
+2018-11-04 11:55:05 ::1 GET /animated_favicon1.gif - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 47
+2018-11-04 11:55:19 ::1 POST /Account/Login - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 302 0 0 958
+2018-11-04 11:55:19 ::1 GET /strona+dla+uzytkownika - 7184 grazyna.selbach@freenet.de ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 71
+2018-11-04 11:55:19 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 2 13
+2018-11-04 11:55:19 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 2 10
+2018-11-04 11:55:19 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 2 242
+2018-11-04 11:55:19 ::1 GET /P8090150.jpg - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 200 0 0 205
+2018-11-04 11:55:20 ::1 GET /cats2.jpg - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 200 0 0 72
+2018-11-04 11:55:20 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 2 7
+2018-11-04 11:55:20 ::1 GET /strona+dla+uzytkownika - 7184 grazyna.selbach@freenet.de ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 200 0 0 7
+#Software: Microsoft Internet Information Services 8.0
+#Version: 1.0
+#Date: 2018-11-04 12:54:12
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2018-11-04 12:54:12 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 0 339
+2018-11-04 12:54:20 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 2 25
+2018-11-04 12:54:27 ::1 GET /Mitteilungen.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 200 0 0 236
+2018-11-04 12:54:29 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 404 0 2 18
+2018-11-04 12:54:29 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 404 0 2 20
+2018-11-04 12:54:29 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 404 0 2 7
+2018-11-04 12:54:29 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 404 0 2 6
+2018-11-04 12:54:29 ::1 GET /Mitteilungen.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 200 0 0 25
+2018-11-04 13:00:47 ::1 GET /Mitteilungen.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 11969
+2018-11-04 13:00:49 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 404 0 2 5
+2018-11-04 13:00:49 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 404 0 2 16
+2018-11-04 13:00:50 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 404 0 2 4
+2018-11-04 13:00:52 ::1 GET /Mitteilungen.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 200 0 0 7
+2018-11-04 13:00:54 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 404 0 0 82
+2018-11-04 13:01:02 ::1 GET /Mitteilungen.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 200 0 0 59
+2018-11-04 13:01:02 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 404 0 2 12
+2018-11-04 13:01:02 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 404 0 2 10
+2018-11-04 13:01:02 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 404 0 2 3
+2018-11-04 13:01:02 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 404 0 2 11
+2018-11-04 13:01:02 ::1 GET /Mitteilungen.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Mitteilungen.cshtml 200 0 0 29
+2018-11-04 13:04:23 ::1 GET /Endecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 171
+2018-11-04 13:04:23 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Endecken.cshtml 404 0 2 19
+2018-11-04 13:04:23 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Endecken.cshtml 404 0 2 11
+2018-11-04 13:04:25 ::1 GET /Endecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Endecken.cshtml 200 0 0 14
+2018-11-04 13:05:13 ::1 GET /strona+dla+uzytkownika - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Endecken.cshtml 200 0 0 104
+2018-11-04 13:05:13 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 2 18
+2018-11-04 13:05:13 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 2 41
+2018-11-04 13:05:13 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 2 28
+2018-11-04 13:05:13 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 2 16
+2018-11-04 13:05:13 ::1 GET /strona+dla+uzytkownika - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 200 0 0 15
+2018-11-04 13:11:40 ::1 GET /strona+dla+uzytkownika.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 6251
+2018-11-04 13:11:40 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 2 17
+2018-11-04 13:11:41 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 2 31
+2018-11-04 13:11:41 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 2 17
+2018-11-04 13:11:41 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 2 8
+2018-11-04 13:11:41 ::1 GET /strona+dla+uzytkownika.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 200 0 0 17
+2018-11-04 13:12:41 ::1 GET /strona+dla+uzytkownika.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 6084
+2018-11-04 13:12:41 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 2 28
+2018-11-04 13:12:41 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 2 13
+2018-11-04 13:12:41 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 2 17
+2018-11-04 13:12:43 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 2 16
+2018-11-04 13:12:43 ::1 GET /strona+dla+uzytkownika.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 200 0 0 5
+2018-11-04 13:13:14 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 0 20
+2018-11-04 13:16:32 ::1 GET /strona+dla+uzytkownika.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 6890
+2018-11-04 13:16:32 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 2 3
+2018-11-04 13:16:34 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 2 51
+2018-11-04 13:16:34 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 2 22
+2018-11-04 13:16:34 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 2 13
+2018-11-04 13:16:34 ::1 GET /strona+dla+uzytkownika.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 200 0 0 12
+2018-11-04 13:16:43 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 0 116
+2018-11-04 13:18:31 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 0 15
+2018-11-04 13:18:35 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika.cshtml 404 0 0 9
+2018-11-04 13:18:42 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 0 113
+2018-11-04 13:20:39 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 5698
+2018-11-04 13:20:39 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 16
+2018-11-04 13:20:39 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 3
+2018-11-04 13:20:40 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 200 0 0 13
+2018-11-04 13:20:42 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 200 0 0 11
+2018-11-04 13:20:42 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 11
+2018-11-04 13:20:42 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 3
+2018-11-04 13:20:42 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 200 0 0 7
+2018-11-04 13:26:06 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 32
+2018-11-04 13:26:08 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 4
+2018-11-04 13:36:04 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 5868
+2018-11-04 13:36:04 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 10
+2018-11-04 13:36:04 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 14
+2018-11-04 13:36:05 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 200 0 0 24
+2018-11-04 13:38:16 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 6015
+2018-11-04 13:38:16 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 16
+2018-11-04 13:38:16 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 4
+2018-11-04 13:38:17 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 200 0 0 36
+2018-11-04 13:40:18 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 6305
+2018-11-04 13:40:18 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 15
+2018-11-04 13:40:18 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 9
+2018-11-04 13:45:38 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 6852
+2018-11-04 13:45:38 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 20
+2018-11-04 13:45:38 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 7
+2018-11-04 13:47:09 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 5971
+2018-11-04 13:47:09 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 34
+2018-11-04 13:47:10 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 404 0 2 7
+2018-11-04 13:47:10 ::1 GET /Entdecken.cshtml - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Entdecken.cshtml 200 0 0 13

@@ -1,0 +1,40 @@
+#Software: Microsoft Internet Information Services 8.0
+#Version: 1.0
+#Date: 2018-11-05 10:10:19
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2018-11-05 10:10:19 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 19601
+2018-11-05 10:10:21 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 4
+#Software: Microsoft Internet Information Services 8.0
+#Version: 1.0
+#Date: 2018-11-05 10:25:01
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2018-11-05 10:25:01 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 2305
+2018-11-05 10:25:01 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 14
+#Software: Microsoft Internet Information Services 8.0
+#Version: 1.0
+#Date: 2018-11-05 10:52:31
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2018-11-05 10:52:31 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 1684
+2018-11-05 10:52:31 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 14
+2018-11-05 11:02:42 ::1 GET /strona+po+wylogowaniu - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 198
+2018-11-05 11:02:44 ::1 GET /IMG0006.jpg - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20po%20wylogowaniu 200 0 0 76
+2018-11-05 11:02:47 ::1 GET /favicon.ico - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20po%20wylogowaniu 404 0 2 65
+2018-11-05 11:04:27 ::1 GET / - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 106
+2018-11-05 11:05:02 ::1 GET /Account/Login - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/ 200 0 0 605
+2018-11-05 11:05:02 ::1 GET /Account/ome!pos.pgn.png - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 404 0 2 39
+2018-11-05 11:05:15 ::1 POST /Account/Login - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 302 0 0 475
+2018-11-05 11:05:15 ::1 GET /strona+dla+uzytkownika - 7184 grazyna.selbach@freenet.de ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login 200 0 0 47
+2018-11-05 11:05:15 ::1 GET /news.js - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 2 18
+2018-11-05 11:05:15 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 2 88
+2018-11-05 11:05:15 ::1 GET /'/cse'/brand' form=%27cref_iframe 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 404 0 2 10
+2018-11-05 11:05:15 ::1 GET /strona+dla+uzytkownika - 7184 grazyna.selbach@freenet.de ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20dla%20uzytkownika 200 0 0 10
+2018-11-05 11:07:46 ::1 GET /Account/Login.cshtml - 7184 grazyna.selbach@freenet.de ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 45
+2018-11-05 11:07:46 ::1 GET /Account/ome!pos.pgn.png - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/Account/Login.cshtml 404 0 2 20
+2018-11-05 11:11:59 ::1 GET /Account/Login.cshtml - 7184 grazyna.selbach@freenet.de ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 8827
+2018-11-05 11:12:11 ::1 GET /Account/Login.cshtml - 7184 grazyna.selbach@freenet.de ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 38
+2018-11-05 11:12:44 ::1 GET /Account/Register.cshtml - 7184 grazyna.selbach@freenet.de ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 - 200 0 0 5199
+#Software: Microsoft Internet Information Services 8.0
+#Version: 1.0
+#Date: 2018-11-05 15:20:53
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2018-11-05 15:20:53 ::1 GET / - 7184 - ::1 Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/70.0.3538.77+Safari/537.36 http://localhost:7184/strona%20po%20wylogowaniu 200 0 0 54

@@ -1,0 +1,9 @@
+#Software: Microsoft Internet Information Services 10.0
+#Version: 1.0
+#Date: 2018-10-23 11:48:29
+#Fields: date time s-ip cs-method cs-uri-stem cs-uri-query s-port cs-username c-ip cs(User-Agent) cs(Referer) sc-status sc-substatus sc-win32-status time-taken
+2018-10-23 11:48:29 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 6234
+2018-10-23 11:48:29 ::1 GET /screenshot-2.png - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) http://localhost:7184/ 200 0 0 21
+2018-10-23 11:48:29 ::1 GET /ome!pos.pgn.png - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) http://localhost:7184/ 200 0 0 54
+2018-10-23 11:48:29 ::1 GET /widok1.jpg - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) http://localhost:7184/ 200 0 0 102
+2018-10-23 11:48:29 ::1 GET / - 7184 - ::1 Mozilla/5.0+(compatible;+MSIE+9.0;+Windows+NT+6.2;+WOW64;+Trident/7.0) - 200 0 0 6
