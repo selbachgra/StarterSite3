@@ -1,0 +1,214 @@
+﻿@* Entfernen Sie diesen Abschnitt, wenn Sie Bundling verwenden. *@
+@section Scripts {
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Anmelden";
+
+    // Allgemeine Seitenvariablen initialisieren
+    var email = "";
+    var password = "";
+    var rememberMe = false;
+
+    var returnUrl = Request.QueryString["ReturnUrl"];
+    if (returnUrl.IsEmpty()) {
+        // Einige externe Anmeldeanbieter erfordern immer einen URL-Rückgabewert.
+        returnUrl = Href("~/strona dla uzytkownika");
+    }
+
+    // Setup validation
+    Validation.RequireField("email", "Sie müssen eine E-Mail-Adresse angeben.");
+    Validation.RequireField("password", "Sie müssen ein Kennwort angeben.");
+    Validation.Add("password",
+        Validator.StringLength(
+            maxLength: Int32.MaxValue,
+            minLength: 6,
+            errorMessage: "Das Kennwort muss mindestens 6 Zeichen lang sein."));
+
+    // Wenn dies eine POST-Anforderung ist, Daten überprüfen und verarbeiten
+    if (IsPost) {
+        AntiForgery.Validate();
+        // Ist dies eine externe Anmeldeanforderung?
+        string provider = Request.Form["provider"];
+        if (!provider.IsEmpty()) {
+            OAuthWebSecurity.RequestAuthentication(provider, Href("~/Account/RegisterService", new { returnUrl }));
+            return;
+        } else if (Validation.IsValid()) {
+            email = Request.Form["email"];
+            password = Request.Form["password"];
+            rememberMe = Request.Form["rememberMe"].AsBool();
+
+            if (WebSecurity.UserExists(email) && WebSecurity.GetPasswordFailuresSinceLastSuccess(email) > 4 && WebSecurity.GetLastPasswordFailureDate(email).AddSeconds(60) > DateTime.UtcNow) {
+                Response.Redirect("~/Account/AccountLockedOut");
+                return;
+            }
+
+            // Versuch der Anmeldung mithilfe der bereitgestellten Anmeldeinformationen
+            if (WebSecurity.Login(email, password, rememberMe)) {
+                Context.RedirectLocal(returnUrl);
+                return;
+            } else {
+                ModelState.AddFormError("Der angegebene Benutzername oder das Kennwort ist falsch.");
+            }
+        }
+    }
+}
+
+<hgroup class="title">
+    <h1>@Page.Title.</h1>
+</hgroup>
+
+<section id="loginForm">
+    <h2>Verwenden eines lokalen Kontos für die Anmeldung.</h2>
+    <form method="post">
+        @AntiForgery.GetHtml()
+        @* Fehler anzeigen, wenn mindestens ein Überprüfungsfehler vorliegt *@
+        @Html.ValidationSummary("Die Anmeldung war nicht erfolgreich. Bitte beheben Sie die Fehler, und versuchen Sie es dann erneut..", excludeFieldErrors: true, htmlAttributes: null)
+
+        <fieldset>
+            <legend>An Ihrem Konto anmelden</legend>
+            <ol>
+                <li class="email">
+                    <label for="email" @if (!ModelState.IsValidField("email"))
+                                       {<text>class="error-label"</text>}>E-Mail-Adresse</label>
+                    <input type="text" id="email" name="email" value="@email" @Validation.For("email")/>
+                    @* Überprüfungsfehler beim Benutzernamen auf der Seite ausgeben *@
+                    @Html.ValidationMessage("email")
+                </li>
+                <li class="password">
+                    <label for="password" @if (!ModelState.IsValidField("password")) {<text>class="error-label"</text>}>Kennwort</label>
+                    <input type="password" id="password" name="password" @Validation.For("password")/>
+                    @* Kennwortüberprüfungsfehler auf der Seite ausgeben *@
+                    @Html.ValidationMessage("password")
+                </li>
+                <li class="remember-me">
+                    <input type="checkbox" id="rememberMe" name="rememberMe" value="true" checked="@rememberMe" />
+                    <label class="checkbox" for="rememberMe">Speichern?</label>
+                </li>
+            </ol>
+            <input type="submit" value="Anmelden" />
+        </fieldset>
+    </form>
+    <p>
+        <a href="~/Account/Register">Sie besitzen kein Konto?</a>
+        <a href="~/Account/ForgotPassword">Haben Sie Ihr Kennwort vergessen?</a>
+    </p>
+</section>
+
+<section class="social" id="socialLoginForm">
+    <h2>Verwenden eines anderen Diensts für die Anmeldung.</h2>
+    
+</section>
+ <fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+</fb:login-button>
+     <fieldset>
+<legend>Log in using another service</legend>
+
+<input type="submit" name="provider" id="twitter" value="Twitter" title="Log in using your Twitter account." />
+<input type="submit" name="provider" id="windowsLive" value="WindowsLive" title="Log in using your Windows Live account." />
+        </script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.7&appId=785616684827268";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+        <h4 id="fb-welcome"style="margin-left: 700px"></h4>
+        <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="true" data-auto-logout-link="true"></div>
+</fieldset>
+ <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '785616684827268',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+
+    // ADD ADDITIONAL FACEBOOK CODE HERE
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<h1 id="fb-welcome"></h1>
+<script>
+    // Place following code after FB.init call.
+
+function onLogin(response) {
+  if (response.status == 'connected') {
+    FB.api('/me?fields=first_name', function(data) {
+      var welcomeBlock = document.getElementById('fb-welcome');
+      welcomeBlock.innerHTML = 'Hello, ' + data.first_name + '!';
+    });
+  }
+}
+
+FB.getLoginStatus(function(response) {
+  // Check login status on load, and if the user is
+  // already logged in, go directly to the welcome message.
+  if (response.status == 'connected') {
+    onLogin(response);
+  } else {
+    // Otherwise, show Login dialog first.
+    FB.login(function(response) {
+      onLogin(response);
+    }, {scope: 'user_friends, email'});
+  }
+});
+</script>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '785616684827268',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+    FB.AppEvents.logPageView();   
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+
+
+
+{
+    status: 'connected',
+    authResponse; {
+        accessToken: '...',
+        expiresIn;'...',
+        signedRequest;'...',
+        userID;'...'
+    }
+}
+</script>
+<script>
+function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+</script>
+</section>

@@ -1,0 +1,137 @@
+﻿@* Entfernen Sie diesen Abschnitt, wenn Sie Bundling verwenden. *@
+@section Scripts {
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Registrieren";
+
+    // Allgemeine Seitenvariablen initialisieren
+    var email = "";
+    var password = "";
+    var confirmPassword = "";
+
+    // Installationsüberprüfung
+    Validation.RequireField("email", "Sie müssen eine E-Mail-Adresse angeben.");
+    Validation.RequireField("password", "Das Kennwort darf nicht leer sein.");
+    Validation.Add("confirmPassword",
+        Validator.EqualsTo("password", "Das Kennwort und das Bestätigungskennwort stimmen nicht überein."));
+    Validation.Add("password",
+        Validator.StringLength(
+            maxLength: Int32.MaxValue,
+            minLength: 6,
+            errorMessage: "Das Kennwort muss mindestens 6 Zeichen lang sein."));
+
+    // Wenn dies eine POST -Anforderung ist, Daten überprüfen und verarbeiten.
+    if (IsPost) {
+        AntiForgery.Validate();
+        email = Request.Form["email"];
+        password = Request.Form["password"];
+        confirmPassword = Request.Form["confirmPassword"];
+
+        // Die Captcha-Antwort des Benutzers überprüfen.
+        // if (!ReCaptcha.Validate("PRIVATE_KEY")) {
+        //     ModelState.AddError("recaptcha", "Die Captcha-Antwort des Benutzers war falsch.");
+        // }
+
+        // Wenn alle Informationen gültig sind, neues Konto erstellen.
+        if (Validation.IsValid()) {
+            // Neuen Benutzer in die Datenbank einfügen.
+            var db = Database.Open("StarterSite");
+
+            // Überprüfen, ob der Benutzer bereits vorhanden ist.
+            var user = db.QuerySingle("SELECT Email FROM UserProfile WHERE LOWER(Email) = LOWER(@0)", email);
+            if (user == null) {
+                // E-Mail in die Profiltabelle einfügen.
+                db.Execute("INSERT INTO UserProfile (Email) VALUES (@0)", email);
+
+                // Neuen Eintrag in der Mitgliedschaftsdatenbank erstellen und zuordnen.
+                // Bei Erfolg Verarbeitung der Anforderung fortsetzen.
+                try {
+                    bool requireEmailConfirmation = !WebMail.SmtpServer.IsEmpty();
+                    var token = WebSecurity.CreateAccount(email, password, requireEmailConfirmation);
+                    if (requireEmailConfirmation) {
+                        var hostUrl = Request.Url.GetComponents(UriComponents.SchemeAndServer, UriFormat.Unescaped);
+                        var confirmationUrl = hostUrl + VirtualPathUtility.ToAbsolute("~/Account/Confirm?confirmationCode=" + HttpUtility.UrlEncode(token));
+
+                        WebMail.Send(
+                            to: email,
+                            subject: "Bitte bestätigen Sie Ihr Konto.",
+                            body: "Der Bestätigungscode zum Aktivieren Ihres Kontos lautet: " + token + ". Visit <a href=\"" + confirmationUrl + "\">" + confirmationUrl + "</a>.."
+                        );
+                    }
+
+                    if (requireEmailConfirmation) {
+                        // Dem Benutzer für die Registrierung danken und ihm mitteilen, dass eine E-Mail gesendet wurde.
+                        Response.Redirect("~/Account/Thanks");
+                    } else {
+                        // Zurück zur Homepage navigieren und beenden.
+                        WebSecurity.Login(email, password);
+
+                        Response.Redirect("~/");
+                    }
+                } catch (System.Web.Security.MembershipCreateUserException e) {
+                    ModelState.AddFormError(e.Message);
+                }
+            } else {
+                // Der Benutzer ist bereits vorhanden.
+                ModelState.AddFormError("Email address is already in use.");
+            }
+        }
+    }
+}
+
+<hgroup class="title">
+    <h1>@Page.Title.</h1>
+    <h2>Ein neues Konto erstellen.</h2>
+</hgroup>
+
+<form method="post">
+    @AntiForgery.GetHtml()
+    @* Den Benutzer benachrichtigen, wenn mindestens ein Überprüfungsfehler vorliegt. *@
+    @Html.ValidationSummary("Die Kontoerstellung war nicht erfolgreich. Bitte beheben Sie die Fehler, und versuchen Sie es dann erneut.", excludeFieldErrors: true, htmlAttributes: null)
+
+    <fieldset>
+        <legend>Registrierungsformular</legend>
+        <ol>
+            <li class="email">
+                <label for="email" @if(!ModelState.IsValidField("email")){<text>class="error-label"</text>}>E-Mail-Adresse</label>
+                <input type="text" id="email" name="email" value="@email" @Validation.For("email") />
+                @* E-Mail-Überprüfungsfehler auf der Seite ausgeben. *@
+                @Html.ValidationMessage("email")
+            </li>
+            <li class="password">
+                <label for="password" @if(!ModelState.IsValidField("password")) {<text>class="error-label"</text>}>Kennwort</label>
+                <input type="password" id="password" name="password" @Validation.For("password") />
+                @* Kennwortüberprüfungsfehler auf der Seite ausgeben. *@
+                @Html.ValidationMessage("password")
+            </li>
+            <li class="confirm-password">
+                <label for="confirmPassword" @if(!ModelState.IsValidField("confirmPassword")) {<text>class="error-label"</text>}>Kennwort bestätigen</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" @Validation.For("confirmPassword") />
+                @* Kennwortüberprüfungsfehler auf der Seite ausgeben. *@
+                @Html.ValidationMessage("confirmPassword")
+            </li>
+            <li class="recaptcha">
+                <div class="message-info">
+                    <p>
+                        Rejestrujac sie akceptujesz <a href="../Regolamin.cshtml"style="background: none">Regolaminr</a>
+                                                    <a href="../termsfeed-html-privacy-policy-english.html.cshtml"style="background: none">privacy-policy-template.pdf</a> 
+                    </p>
+                    <style>
+                    a{
+                        color: #0094ff;
+                    }
+    </style>
+                </div>
+                @*
+                @ReCaptcha.GetHtml("PUBLIC_KEY", theme: "white")
+                @Html.ValidationMessage("recaptcha")
+                *@
+            </li>
+        </ol>
+        <input type="submit" value="Register" />
+    </fieldset>
+</form>

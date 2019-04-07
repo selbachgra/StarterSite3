@@ -1,0 +1,201 @@
+﻿@using WebMatrix.WebData
+
+@* Entfernen Sie diesen Abschnitt, wenn Sie Bundling verwenden. *@
+@section Scripts {
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
+@{
+    WebSecurity.RequireAuthenticatedUser();
+
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Konto verwalten";
+
+    var action = Request.Form["action"];
+
+    bool hasLocalAccount = OAuthWebSecurity.HasLocalAccount(WebSecurity.CurrentUserId);
+
+    string successMessage = "";
+    var message = Request.QueryString["message"];
+    if (message == "ChangedPassword") {
+        successMessage = "Ihr Passwort wurde geändert.";
+    } else if (message == "SetPassword") {
+        successMessage = "Ihr Passwort wurde festgelegt.";
+    } else if (message == "RemovedLogin") {
+        successMessage = "Die externe Anmeldung wurde entfernt.";
+    }
+
+    var externalLogins =
+        (from account in OAuthWebSecurity.GetAccountsFromUserName(WebSecurity.CurrentUserName)
+         let clientData = OAuthWebSecurity.GetOAuthClientData(account.Provider)
+         select new { Provider = account.Provider, ProviderDisplayName = clientData.DisplayName, UserId = account.ProviderUserId })
+        .ToList();
+    bool canRemoveLogin = externalLogins.Count > 1 || hasLocalAccount;
+
+    // Überprüfung einrichten
+    if (hasLocalAccount) {
+        Validation.RequireField("currentPassword", "Das Feld für das aktuelle Kennwort ist ein Pflichtfeld.");
+        Validation.Add("currentPassword",
+            Validator.StringLength(
+                maxLength: Int32.MaxValue,
+                minLength: 6,
+                errorMessage: "Das aktuelle Kennwort muss mindestens 6 Zeichen lang sein."));
+    }
+    Validation.RequireField("newPassword", "Das Feld für das neue Kennwort ist ein Pflichtfeld.");
+    Validation.Add("confirmPassword",
+        Validator.Required("Das Feld zum Bestätigen des neuen Kennworts ist ein Pflichtfeld."),
+        Validator.EqualsTo("newPassword", "Das neue Kennwort stimmt nicht mit dem Bestätigungskennwort überein."));
+    Validation.Add("newPassword",
+        Validator.StringLength(
+            maxLength: Int32.MaxValue,
+            minLength: 6,
+            errorMessage: "Das neue Kennwort muss mindestens 6 Zeichen lang sein."));
+
+    if (IsPost) {
+        AntiForgery.Validate();
+        if (action == "password") {
+            // Kennwortvorgänge des lokalen Kontos verarbeiten
+            var currentPassword = Request.Form["currentPassword"];
+            var newPassword = Request.Form["newPassword"];
+            var confirmPassword = Request.Form["confirmPassword"];
+
+            if (Validation.IsValid()) {
+                if (hasLocalAccount) {
+                    if (WebSecurity.ChangePassword(WebSecurity.CurrentUserName, currentPassword, newPassword)) {
+                        Response.Redirect("~/Account/Manage?message=ChangedPassword");
+                        return;
+                    } else {
+                        ModelState.AddFormError("Fehler beim Versuch, das Kennwort zu ändern. Wenden Sie sich an den Eigentümer der Website.");
+                    }
+                } else {
+                    bool requireEmailConfirmation = !WebMail.SmtpServer.IsEmpty();
+                    try {
+                        WebSecurity.CreateAccount(WebSecurity.CurrentUserName, newPassword, requireEmailConfirmation);
+                        Response.Redirect("~/Account/Manage?message=SetPassword");
+                        return;
+                    } catch (System.Web.Security.MembershipCreateUserException e) {
+                        ModelState.AddFormError(e.Message);
+                    }
+                }
+            } else {
+                ModelState.AddFormError("Die Kennwortänderung war nicht erfolgreich. Beheben Sie die Fehler, und wiederholen Sie den Vorgang.");
+            }
+        } else if (action == "removeLogin") {
+            // Externe Anmeldung entfernen
+            var provider = Request.Form["provider"];
+            var userId = Request.Form["userId"];
+
+            message = null;
+            var ownerAccount = OAuthWebSecurity.GetUserName(provider, userId);
+            // Die externe Anmeldung nur entfernen, wenn der aktuell angemeldete Benutzer der Besitzer ist und es sich nicht um die letzten Anmeldeinformationen des Benutzers handelt
+            if (ownerAccount == WebSecurity.CurrentUserName && canRemoveLogin) {
+                OAuthWebSecurity.DeleteAccount(provider, userId);
+                message = "RemovedLogin";
+            }
+            Response.Redirect(Href("~/Account/Manage", new { message }));
+            return;
+        } else {
+            // Annehmen, dass es sich um eine externe Anmeldeanforderung handelt
+            string provider = Request.Form["provider"];
+            if (!provider.IsEmpty()) {
+                OAuthWebSecurity.RequestAuthentication(provider, Href("~/Account/RegisterService", new { returnUrl = Href("~/Account/Manage") }));
+                return;
+            }
+        }
+    }
+}
+<hgroup class="title">
+    <h1>@Page.Title.</h1>
+</hgroup>
+
+@if (!successMessage.IsEmpty()) {
+    <p class="message-success">
+        @successMessage
+    </p>
+}
+
+<p>Sie sind angemeldet als <strong>@WebSecurity.CurrentUserName</strong>.</p>
+
+@if (hasLocalAccount) {
+    <h3>Kennwort ändern</h3>
+} else {
+    <p>
+        Sie verfügen über kein lokales Kennwort für diese Website. Fügen Sie ein lokales Kennwort hinzu, damit Sie sich ohne eine externe Anmeldung anmelden können.
+    </p>
+}
+
+<form method="post">
+    @AntiForgery.GetHtml()
+    @Html.ValidationSummary(excludeFieldErrors: true)
+
+    <fieldset>
+        <legend>
+        @if (hasLocalAccount) {
+            <text>Formular zum Ändern des Kennworts</text>
+        } else {
+            <text>Formular zum Festlegen des Kennworts</text>
+        }
+        </legend>
+        <ol>
+            @if (hasLocalAccount) {
+                <li class="current-password">
+                    <label for="currentPassword" @if (!ModelState.IsValidField("currentPassword")) {<text>class="error-label"</text>}>Aktuelles Kennwort</label>
+                    <input type="password" id="currentPassword" name="currentPassword" @Validation.For("currentPassword")/>
+                    @Html.ValidationMessage("currentPassword")
+                </li>
+            }
+            <li class="new-password">
+                <label for="newPassword" @if (!ModelState.IsValidField("newPassword")) {<text>class="error-label"</text>}>Neues Kennwort</label>
+                <input type="password" id="newPassword" name="newPassword" @Validation.For("newPassword")/>
+                @Html.ValidationMessage("newPassword")
+            </li>
+            <li class="confirm-password">
+                <label for="confirmPassword" @if (!ModelState.IsValidField("confirmPassword")) {<text>class="error-label"</text>}>Neues Kennwort bestätigen</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" @Validation.For("confirmPassword")/>
+                @Html.ValidationMessage("confirmPassword")
+            </li>
+        </ol>
+        @if (hasLocalAccount) {
+            <button type="submit" name="action" value="password">Kennwort ändern</button>
+            <p>
+                Klicken Sie <a href="~/Account/ForgotPassword" title="Forgot password page">hier</a>, wenn Sie Ihr Kennwort vergessen haben.
+            </p>
+        } else {
+            <button type="submit" name="action" value="password">Kennwort festlegen</button>
+        }
+    </fieldset>
+</form>
+
+<section id="externalLogins">
+    @if (externalLogins.Count > 0) {
+        <h3>Registrierte externe Anmeldungen</h3>
+        <table>
+            <tbody>
+            @foreach (var externalLogin in externalLogins) {
+                <tr>
+                    <td>@externalLogin.ProviderDisplayName</td>
+                    <td>
+                        @if (canRemoveLogin) {
+                            <form method="post">
+                                @AntiForgery.GetHtml()
+                                <fieldset>
+                                    <legend></legend>
+                                    <input type="hidden" name="provider" value="@externalLogin.Provider" />
+                                    <input type="hidden" name="userId" value="@externalLogin.UserId" />
+                                    <button type="submit" name="action" value="removeLogin" title="Diese @externalLogin.ProviderDisplayName-Anmeldeinformationen aus dem Konto entfernen">Entfernen</button>
+                                </fieldset>
+                            </form>
+                        } else {
+                            @: &nbsp;
+                        }
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    }
+
+    <h3>Externe Anmeldung hinzufügen</h3>
+    @RenderPage("~/Account/_ExternalLoginsList.cshtml")
+</section>
