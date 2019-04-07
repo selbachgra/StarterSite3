@@ -1,0 +1,100 @@
+﻿@{
+   Layout = "~/_SiteLayout.cshtml";
+    
+    WebImage photos = null;
+    var newFileName = "";
+    var imagePath = "";
+    
+    if(IsPost){
+        photos = WebImage.GetImageFromRequest();
+        if(photos != null){
+            newFileName = Guid.NewGuid().ToString() + "_" +
+                Path.GetFileName(photos.FileName);
+            imagePath = @"images\" + newFileName;
+            photos.Resize(width:60, height:60, preserveAspectRatio: true,
+               preventEnlarge: true);
+            photos.Save(@"~\" + imagePath);
+        }
+}   
+}
+
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Repley</title>
+   
+<link href="~/animated_favicon1.gif" rel="animated_favicon1 ico" type="image/x-icon"/>
+<meta name="twitter:widgets:theme" content="light"/>
+<meta name="twitter:widgets:link-color" content="#55acee"/>
+<meta name="twitter:widgets:border-color" content="#55acee"/>
+        <script>
+$(document).ready(function(){
+    $("button").click(function(){
+        var txt = "";
+        txt += "Width of div: " + $("#div1").width() + "</br>";
+        txt += "Height of div: " + $("#div1").height();
+        $("#div1").html(txt);
+        $("#a href").html(buton)
+    });
+});
+</script>
+
+    <style>
+Repley{
+    display: none;        
+        }        
+
+
+    #rcorners2 {
+    border-radius: 5px;
+    border: 1px solid #8AC007;
+    padding: 20px; 
+    width: 400px;
+   
+    resize: vertical;
+        
+}
+</style>                                                                                                         
+</head>
+    <body>
+ @{
+if (IsPost)
+{ 
+string companyname = Request["CompanyName"]; 
+<p id="rcorners2"><br>  
+<a id="vc-feelback-main" data-access-token="6d31f93bca9335598759477f73a050b0" data-display-type="4"></a>
+ @companyname <br> 
+ </p> 
+}
+else
+{
+<form method="post" action=""method="post" style="margin-top: 10px">
+Company Name:<br> 
+<p class="padding"><input type="text" name="CompanyName" value=""><br>
+<a class="" href="http://localhost:37328/Page2.cshtml/favorite?post_id=Null"target="_blank"></a></p>
+<p id="demo"></p>
+<input type="submit" value="Submit" class="submit">
+</form> 
+}
+}
+  
+ 
+<script>
+     
+(function() { 
+var v = document.createElement('script'); v.async = true; 
+v.src = "http://assets-prod.vicomi.com/vicomi.js"; 
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(v, s); 
+})(); 
+</script>
+        <script>
+function myFunction() {
+    var c = document.createComment("My personal comments");
+    document.body.appendChild(c);
+    var x = document.getElementById("demo");
+    x.innerHTML = "A comment was added to this document, but as you know, comments are invisible.";
+}
+</script>                    
+    </body>
+</html>
