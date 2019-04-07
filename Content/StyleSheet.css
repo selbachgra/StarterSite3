@@ -1,0 +1,138 @@
+body {
+}
+
+/*head*/
+     title{
+         display: none;       
+            }
+    
+ h1{
+  display: none;              
+            }           
+div.background
+{
+  width: 100%;
+  height: 100%;
+  background: url(widok1.jpg) repeat;
+  border: 2px solid black;
+  background-size: 100% 100%;
+
+}
+div.transbox
+{
+  width:400px; 
+  height: 300px;
+  margin: 180px 200px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  
+  opacity:0.6;
+  width: auto;
+  border-radius: 10px 10px 10px 10px;
+  float: left;
+  
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+div.transbox p
+{
+  margin: 30px 40px;
+  font-weight: bold;
+  color: #000000;
+  font-size: 30px;
+  border-radius: 10px 10px 10px 10px;
+   
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li{
+    float: left;
+    text-align: center;
+    color: #4800ff;
+    float: left;
+}
+
+a:link, a:visited{
+    display: block;
+    width: 100px;
+    font-weight: bold;
+    color: #808080;
+    background-color: none;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: none;
+}
+
+a:hover, a:active{
+    background-color: none;
+}
+
+
+p{
+          text-align: center;
+          color: #808080     
+            }            
+ /* unvisited link */
+a:link{
+    color: #ffffff;
+    
+}
+
+/* visited link */
+a:visited{
+    color: #808080;
+}
+
+/* mouse over link */
+a:hover{
+    color: #00fff7;
+}
+
+/* selected link */
+a:active {
+    color: #808080;
+}
+#footer{
+    color: #808080            
+            }
+h1{
+    color: #ffffff;
+             
+            }
+#ome{
+    color: #808080
+                 
+            }
+div img src{
+     position:relative 
+            }            
+li-a{
+       width: 100px;
+       background-color: #FFF;         
+            }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+   
+     menu{
+    margin-top:-1px;
+    margin-left: 140px;
+    background-color:#0026ff;
+    width: 200px;
+    border: 1px solid red;
+    border-radius: 5px 5px 5px 5px;
+    float: left;
+    margin-top: 10px;    
+    }
+     menu1{
+    font-size: 12px;    
+    }
+
