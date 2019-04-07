@@ -1,0 +1,28 @@
+﻿@{
+    WebSecurity.InitializeDatabaseConnection("StarterSite", "UserProfile", "UserId", "Email", autoCreateTables: true);
+
+    // Damit sich Benutzer dieser Website mithilfe ihrer Konten von anderen Websites (z. B. Microsoft, Facebook und Twitter) anmelden können,
+    // müssen Sie diese Website aktualisieren. Weitere Informationen finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=226949".
+
+    //OAuthWebSecurity.RegisterMicrosoftClient(
+    //    clientId: "",
+    //    clientSecret: "");
+
+    //OAuthWebSecurity.RegisterTwitterClient(
+    //    consumerKey: "",
+    //    consumerSecret: "");
+
+    //OAuthWebSecurity.RegisterFacebookClient(
+    //    appId: "",
+    //    appSecret: "");
+
+    //OAuthWebSecurity.RegisterGoogleClient();
+
+    //WebMail.SmtpServer = "mailserver.example.com";
+    //WebMail.EnableSsl = true;
+    //WebMail.UserName = "username@example.com";
+    //WebMail.Password = "your-password";
+    //WebMail.From = "your-name-here@example.com";
+
+    // Weitere Informationen zum Optimieren von Skripts und Stylesheets auf Ihrer Website finden Sie unter "http://go.microsoft.com/fwlink/?LinkID=248973".
+}
