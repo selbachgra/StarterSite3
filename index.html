@@ -1,4 +1,102 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        <title>@Page.Title - Meine ome!pos</title>
+        <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="~/animated_favicon1.gif" rel="animated_favicon1 icon" type="image/x-icon"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png"/>
+        <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+        <script src="~/Scripts/jquery-ui-1.8.24.js"></script>
+        <script src="~/Scripts/modernizr-2.6.2.js"></script>
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title"><a href="~/"><img src='http://localhost:7184/ome!pos.pgn.png'alt="..."title="ome!pos"/></a></p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @if (WebSecurity.IsAuthenticated) {
+                            <text>
+                                Hello, <a class="email" href="~/Account/Manage" title="Manage">@WebSecurity.CurrentUserName</a>!
+                                <form id="logoutForm" action="~/Account/Logout" method="post">
+                                    @AntiForgery.GetHtml()
+                                    <a href="javascript:document.getElementById('logoutForm').submit()"></a>
+                                </form>
+                            </text>
+                        } else {
+                           
+                        }
+                    </section>
+                    
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <nav>
+                <ul id="menu">
+                            <li><a href="~/"style="font-size: 12px">Startseite</a></li>
+                            <li><a href="~/About"style="font-size: 12px">Info</a></li>
+                            <li><a href="~/LICENSE"style="font-size: 12px">LICENSE</a></li>
+                            <li><a href="~/Regolamin"style="font-size: 12px">Regolamin</a></li>
+                            <li><a href="~/Contact"style="font-size: 12px">Contakt</a></li>
+                            <li><a href="~/Praca"style="font-size: 12px">Praca</a></li>
+                            <li><a href="~/Forum"style="font-size: 12px">Forum</a></li>
+                            <li><a href="~/Photolio"style="font-size: 12px">Photolio</a></li>
+                            <li><a href="~/Zdjecia"style="font-size: 12px">Fotografia</a></li>
+                            <li><a href="~/termsfeed-html-privacy-policy-english.html.cshtml"style="font-size: 12px">Privacy Policy</a></li>
+                            <li><a href="~/twitter strona.cshtml"style="font-size: 12px">Twitter przegląd</a></li>
+                            <li><a href="~/Endecken"></a></li>
+                            <li><a href="~/Mitteilungen"></a></li>
+                            <li><a href="~/Zakladka"></a></li>
+                            <li><a href="~/strona dla uzytkownika"></a></li>
+                            <li><a href="~/strona po wylogowaniu"></a></li>  
+                        </ul>
+                        </nav>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - Copyright<img src='http://localhost:7184/ome!pos.pgn.png'alt="..."title="ome!pos" style='width:50px;border-radius: 50px 50px 50px 50px;opacity:0.6'/></p>
+                </div>
+            </div>
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5012968b5be75853" async="async"></script>
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<iframe src="https://www.facebook.com/plugins/follow?href=https%3A%2F%2Fwww.facebook.com%2Fgrazyna.selbach&amp;layout=standard&amp;show_faces=true&amp;colorscheme=light&amp;width=450&amp;height=80" style="border:none; overflow:hidden; width:450px; height:80px;"></iframe>        
+</div>               
+<!-- Fügen Sie dieses Tag in den head-Abschnitt oder direkt vor dem schließenden body-Tag ein. -->
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'de'}
+</script>
+<!-- Fügen Sie dieses Tag an der Stelle ein, an der die +1-Schaltfläche erscheinen soll. -->
+
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-501295fb2e635c15"></script>
+<!-- AddThis Button END -->
+<!--Go to www.ad<!-- Go to www.addthis.com/dashboard to customize your tool--><div class="addthis_native_toolbox"></div>
+                </div>
+        </footer>
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>
+
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
