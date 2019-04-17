@@ -3,7 +3,7 @@
     <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta charset="utf-8" />
-        <title> Meine ome!pos</title>
+        <title>{{ page.title }}</title>
         <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
         <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
         
@@ -14,6 +14,8 @@
         <meta name="viewport" content="width=device-width" />
     </head>
     <body>
+        {% include navigation.html %}
+    {{ content }}
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
@@ -23,7 +25,7 @@
                     <section id="login">
                       
                             <text>
-                                Hello, <a class="email" href="~/Account/Manage" title="Manage"></a>!
+                              <a class="email" href="~/Account/Manage" title="Manage"></a>
                                 <form id="logoutForm" action="~/Account/Logout" method="post">
                                    
                                     <a href="javascript:document.getElementById('logoutForm').submit()"></a>
@@ -44,22 +46,22 @@
         <footer>
             <nav>
                
-                            <a href="~/"style="font-size: 12px">Startseite</a>
-                            <a href="~/About"style="font-size: 12px">Info</a>
-                            <a href="~/LICENSE"style="font-size: 12px">LICENSE</a>
-                            <a href="~/Regolamin"style="font-size: 12px">Regolamin</a>
-                            <a href="~/Contact"style="font-size: 12px">Contakt</a>
-                            <a href="~/Praca"style="font-size: 12px">Praca</a>
-                            <a href="~/Forum"style="font-size: 12px">Forum</a>
-                            <a href="~/Photolio"style="font-size: 12px">Photolio</a>
-                            <a href="~/Zdjecia"style="font-size: 12px">Fotografia</a>
-                            <a href="~/termsfeed-html-privacy-policy-english.html.cshtml"style="font-size: 12px">Privacy Policy</a>
+                            <a href="/"{% if page.url == "/" %}style="font-size: 12px">Startseite</a>
+                            <a href="/About"{% if About.url == "/" %}style="font-size: 12px">Info</a>
+                            <a href="/LICENSE"{% if License.url == "/" %}style="font-size: 12px">LICENSE</a>
+                            <a href="/Regolamin"{% if Regolamin.url == "/" %}style="font-size: 12px">Regolamin</a>
+                            <a href="/Contact"{% if Contact.url == "/" %}style="font-size: 12px">Contakt</a>
+                            <a href="/Praca"{% if Praca.url == "/" %}style="font-size: 12px">Praca</a>
+                            <a href="/Forum"{% if Forum.url == "/" %}style="font-size: 12px">Forum</a>
+                            <a href="/Photolio"{% if Photolio.url == "/" %}style="font-size: 12px">Photolio</a>
+                            <a href="/Zdjecia"{% if Zdjecia.url == "/" %}style="font-size: 12px">Fotografia</a>
+                            <a href="/termsfeed-html-privacy-policy-english.html.cshtml"{% if privatcy policy.url == "/" %}style="font-size: 12px">Privacy Policy</a>
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <a href="~/twitter strona.cshtml"style="font-size: 12px">Twitter przegląd</a></li>
-                            <a href="~/Endecken"></a>
-                            <a href="~/Mitteilungen"></a>
-                            <a href="~/Zakladka"></a>
-                            <a href="~/strona dla uzytkownika"></a>
-                            <a href="~/strona po wylogowaniu"></a>  
+                            <a href="/Endecken"{% if Endecken.url == "/" %}></a>
+                            <a href="/Mitteilungen"{% if Mitteilungen.url == "/" %}></a>
+                            <a href="/Zakladka"{% if Zakladka.url == "/" %}></a>
+                            <a href="/strona dla uzytkownika"{% if strona dla uzytkownikow.url == "/" %}></a>
+                            <a href="/strona po wylogowaniu"{% if strona po wylogowaniu.url == "/" %}></a>  
                        
                         </nav>
             <div class="content-wrapper">
