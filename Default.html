@@ -1,12 +1,11 @@
 <!doctype html>
-<hgroup class="title">
-    <h1></h1>
-   
-</hgroup>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
 <meta name="description" content="description_ome!pos_spolecznosc_kontakty"/>
-<link href="~/animated_favicon1.gif" rel="animated_favicon1 icon" type="image/x-icon"/>
- <link href="~/animated_favicon1.gif" rel="animated_favicon1 icon" type="image/x-icon"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png"/>
 <style>
    title{
          display: none;       
@@ -155,26 +154,26 @@ ul {
     <p>Twórz wizualny świat</p>
                    <nav>
                            <ul id="menu">  
-                                <li><a href="~/Account/Register"style="margin-top:-1px;margin-left: 120px;background-color:#0026ff;width: 200px;border: 1px solid red;border-radius: 5px 5px 5px 5px;float: left;">Registrieren</a></li>  
+                                <li><a href="/Account/Register"{% if page.url == "/Account.html" %}style="margin-top:-1px;margin-left: 120px;background-color:#0026ff;width: 200px;border: 1px solid red;border-radius: 5px 5px 5px 5px;float: left;">Registrieren</a></li>  
 
-                               <li><a href="~/Account/Login" style="margin-top: 10px; margin-left: 120px; background-color: #0026ff; width: 200px; border: 1px solid red; border-radius: 5px 5px 5px 5px; float: left;">Anmelden</a></li>                                    
+                               <li><a href="/Account/Login"{% if page.url == "/Account/Login.html" %} style="margin-top: 10px; margin-left: 120px; background-color: #0026ff; width: 200px; border: 1px solid red; border-radius: 5px 5px 5px 5px; float: left;">Anmelden</a></li>                                    
 
                             </ul>
                         </nav>
 
                    <nav>
                        
-                            <a href="~/">Startseite</a>
-                            <a href="~/About">Info</a>
-                            <a href="~/Contact">Contakt</a>
-                            <a href="~/About">About</a>
-                            <a href="~/Regolamin">Regolamin</a>
-                            <a href="~/LICENSE">LICENSE</a>
-                            <a href="~/Praca">Praca</a>
-                            <a href="~/Forum">Forum</a>
-                            <a href="~/Photolio">Photolio</a>
-                            <a href="~/termsfeed-html-privacy-policy-english.html.cshtml">Privacy Policy</a>
-                            <a href="~/twitter strona.cshtml">Twitter przegląd</a>
+                            <a href="/"{% if page.url == "/" %}>Startseite</a>
+                            <a href="/About"{% if page.url == "/About.html" %}>Info</a>
+                            <a href="/Contact"{% if page.url == "/Contact.html" %}>Contakt</a>
+                            <a href="/About"{% if page.url == "/About.html" %}>About</a>
+                            <a href="/Regolamin"{% if page.url == "/Regolamin.html" %}>Regolamin</a>
+                            <a href="/LICENSE"{% if page.url == "/License.html" %}>LICENSE</a>
+                            <a href="/Praca"{% if page.url == "/Ptaca.html" %}>Praca</a>
+                            <a href="/Forum"{% if page.url == "/Forum.html" %}>Forum</a>
+                            <a href="/Photolio"{% if page.url == "/Photolio.html" %}>Photolio</a>
+                            <a href="/termsfeed-html-privacy-policy-english.html.cshtml"{% if page.url == "/privacy policy.html" %}>Privacy Policy</a>
+                            <a href="/twitter strona.cshtml"{% if page.url == "/twitter.html" %}>Twitter przegląd</a>
                       
                        </nav>
                    </div>
@@ -187,8 +186,7 @@ ul {
                     </div>
           
 
-         <p>&copy;2019 - Copyright <img src='ome!pos.pgn.png'alt="..." style='width:80px;border-radius: 50px 50px 50px 50px;'/></p>
-
+         
     </body>
    </html>
         
