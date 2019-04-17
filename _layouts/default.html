@@ -3,7 +3,7 @@
     <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta charset="utf-8" />
-        <title>@Page.Title - Meine ome!pos</title>
+        <title> Meine ome!pos</title>
         <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
         <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
    
@@ -21,52 +21,50 @@
                 </div>
                 <div class="float-right">
                     <section id="login">
-                        @if (WebSecurity.IsAuthenticated) {
+                       {
                             <text>
-                                Hello, <a class="email" href="~/Account/Manage" title="Manage">@WebSecurity.CurrentUserName</a>!
+                                Hello, <a class="email" href="~/Account/Manage" title="Manage"></a>!
                                 <form id="logoutForm" action="~/Account/Logout" method="post">
-                                    @AntiForgery.GetHtml()
+                                   
                                     <a href="javascript:document.getElementById('logoutForm').submit()"></a>
                                 </form>
                             </text>
-                        } else {
-                           
-                        }
+                        
                     </section>
                     
                 </div>
             </div>
         </header>
         <div id="body">
-            @RenderSection("featured", required: false)
+           
             <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
+              
             </section>
         </div>
         <footer>
             <nav>
                 <ul id="menu">
-                            <li><a href="~/"style="font-size: 12px">Startseite</a></li>
-                            <li><a href="~/About"style="font-size: 12px">Info</a></li>
-                            <li><a href="~/LICENSE"style="font-size: 12px">LICENSE</a></li>
-                            <li><a href="~/Regolamin"style="font-size: 12px">Regolamin</a></li>
-                            <li><a href="~/Contact"style="font-size: 12px">Contakt</a></li>
-                            <li><a href="~/Praca"style="font-size: 12px">Praca</a></li>
-                            <li><a href="~/Forum"style="font-size: 12px">Forum</a></li>
-                            <li><a href="~/Photolio"style="font-size: 12px">Photolio</a></li>
-                            <li><a href="~/Zdjecia"style="font-size: 12px">Fotografia</a></li>
-                            <li><a href="~/termsfeed-html-privacy-policy-english.html.cshtml"style="font-size: 12px">Privacy Policy</a></li>
-                            <li><a href="~/twitter strona.cshtml"style="font-size: 12px">Twitter przegląd</a></li>
-                            <li><a href="~/Endecken"></a></li>
-                            <li><a href="~/Mitteilungen"></a></li>
-                            <li><a href="~/Zakladka"></a></li>
-                            <li><a href="~/strona dla uzytkownika"></a></li>
-                            <li><a href="~/strona po wylogowaniu"></a></li>  
+                            <a href="~/"style="font-size: 12px">Startseite</a>
+                            <a href="~/About"style="font-size: 12px">Info</a>
+                            <a href="~/LICENSE"style="font-size: 12px">LICENSE</a>
+                            <a href="~/Regolamin"style="font-size: 12px">Regolamin</a>
+                            <a href="~/Contact"style="font-size: 12px">Contakt</a>
+                            <a href="~/Praca"style="font-size: 12px">Praca</a>
+                            <a href="~/Forum"style="font-size: 12px">Forum</a>
+                            <a href="~/Photolio"style="font-size: 12px">Photolio</a>
+                            <a href="~/Zdjecia"style="font-size: 12px">Fotografia</a>
+                            <a href="~/termsfeed-html-privacy-policy-english.html.cshtml"style="font-size: 12px">Privacy Policy</a>
+                            <a href="~/twitter strona.cshtml"style="font-size: 12px">Twitter przegląd</a>
+                            <a href="~/Endecken"></a>
+                            <a href="~/Mitteilungen"></a>
+                            <a href="~/Zakladka"></a>
+                            <a href="~/strona dla uzytkownika"></a>
+                            <a href="~/strona po wylogowaniu"></a>  
                         </ul>
                         </nav>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - Copyright<img src='http://localhost:7184/ome!pos.pgn.png'alt="..."title="ome!pos" style='width:50px;border-radius: 50px 50px 50px 50px;opacity:0.6'/></p>
+                    <p>&copy;2019 - Copyright<img src='http://localhost:7184/ome!pos.pgn.png'alt="..."title="ome!pos" style='width:50px;border-radius: 50px 50px 50px 50px;opacity:0.6'/></p>
                 </div>
             </div>
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -92,6 +90,6 @@
 <!--Go to www.ad<!-- Go to www.addthis.com/dashboard to customize your tool--><div class="addthis_native_toolbox"></div>
                 </div>
         </footer>
-        @RenderSection("Scripts", required: false)
+       
     </body>
 </html>
