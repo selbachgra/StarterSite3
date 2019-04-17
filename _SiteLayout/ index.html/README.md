@@ -6,7 +6,7 @@
         <title> Meine ome!pos</title>
         <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
         <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-        <link href="~/animated_favicon1.gif" rel="animated_favicon1 icon" type="image/x-icon"/>
+        
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png"/>
         <script src="~/Scripts/jquery-1.8.2.min.js"></script>
         <script src="~/Scripts/jquery-ui-1.8.24.js"></script>
