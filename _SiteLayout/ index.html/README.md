@@ -3,7 +3,7 @@
     <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta charset="utf-8" />
-        <title>@Page.Title - Meine ome!pos</title>
+        <title> Meine ome!pos</title>
         <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
         <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
         <link href="~/animated_favicon1.gif" rel="animated_favicon1 icon" type="image/x-icon"/>
@@ -21,26 +21,23 @@
                 </div>
                 <div class="float-right">
                     <section id="login">
-                        @if (WebSecurity.IsAuthenticated) {
+                         {
                             <text>
-                                Hello, <a class="email" href="~/Account/Manage" title="Manage">@WebSecurity.CurrentUserName</a>!
+                                Hello, <a class="email" href="~/Account/Manage" </a>!
                                 <form id="logoutForm" action="~/Account/Logout" method="post">
-                                    @AntiForgery.GetHtml()
-                                    <a href="javascript:document.getElementById('logoutForm').submit()"></a>
+                                   
+           
+           <a href="javascript:document.getElementById('logoutForm').submit()"></a>
                                 </form>
                             </text>
-                        } else {
-                           
-                        }
+                       
                     </section>
                     
                 </div>
             </div>
         </header>
         <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
+           
             </section>
         </div>
         <footer>
@@ -66,7 +63,7 @@
                         </nav>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - Copyright<img src='http://localhost:7184/ome!pos.pgn.png'alt="..."title="ome!pos" style='width:50px;border-radius: 50px 50px 50px 50px;opacity:0.6'/></p>
+                    <p>&copy;2019 - Copyright<img src='http://localhost:7184/ome!pos.pgn.png'alt="..."title="ome!pos" style='width:50px;border-radius: 50px 50px 50px 50px;opacity:0.6'/></p>
                 </div>
             </div>
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -92,6 +89,6 @@
 <!--Go to www.ad<!-- Go to www.addthis.com/dashboard to customize your tool--><div class="addthis_native_toolbox"></div>
                 </div>
         </footer>
-        @RenderSection("Scripts", required: false)
+       
     </body>
 </html>
