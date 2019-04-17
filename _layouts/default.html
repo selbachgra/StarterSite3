@@ -25,8 +25,8 @@
                     <section id="login">
            
                             <text>
-                                Hello, <a class="email" href="~/Account/Manage" title="Manage"></a>!
-                                <form id="logoutForm" action="~/Account/Logout" method="post">
+                                 <a class="email" href="~/Account/Manage"{% if page.url == "/Account.html" %} title="Manage"></a>
+                                <form id="logoutForm" action="~/Account/Logout"{% if page.url == "/Acount/Logout.html" %} method="post">
                                    
                                     <a href="javascript:document.getElementById('logoutForm').submit()"></a>
                                 </form>
@@ -46,8 +46,8 @@
         <footer>
             <nav>
                 <ul id="menu">
-                            <a href="~/"style="font-size: 12px">Startseite</a>
-                            <a href="~/About"style="font-size: 12px">Info</a>
+                            <a href="~/"{% if page.url == "/"style="font-size: 12px">Startseite</a>
+                            <a href="~/About"{% if About.url == "/"style="font-size: 12px">Info</a>
                             <a href="~/LICENSE"style="font-size: 12px">LICENSE</a>
                             <a href="~/Regolamin"style="font-size: 12px">Regolamin</a>
                             <a href="~/Contact"style="font-size: 12px">Contakt</a>
@@ -64,11 +64,7 @@
                             <a href="~/strona po wylogowaniu"></a>  
                         </ul>
                         </nav>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy;2019 - Copyright<img src='http://localhost:7184/ome!pos.pgn.png'alt="..."title="ome!pos" style='width:50px;border-radius: 50px 50px 50px 50px;opacity:0.6'/></p>
-                </div>
-            </div>
+            
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5012968b5be75853" async="async"></script>
 <!-- AddThis Button BEGIN -->
