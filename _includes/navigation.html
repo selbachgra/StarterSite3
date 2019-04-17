@@ -1,3 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    {% include navigation.html %}
+    {{ content }}
+ 
 <nav>
   <a href="/"{% if page.url == "/" %}>Home</a>
   <a href="/about.html"{% if page.url == "/about.html" %}>About</a>
@@ -16,3 +26,5 @@
   <a href="/strona dla uzytkownika"></a>
   <a href="/strona po wylogowaniu"{% if page.url == "/Strona po wylogowaniu.html" %}></a> 
 </nav>
+ </body>
+</html>
