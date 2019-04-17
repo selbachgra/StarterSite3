@@ -1,12 +1,13 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="de">
     <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta charset="utf-8" />
+         <title>{{ page.title }}</title>
         <title>@Page.Title - Meine ome!pos</title>
         <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
         <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-        <link href="~/animated_favicon1.gif" rel="animated_favicon1 icon" type="image/x-icon"/>
+        
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png"/>
         <script src="~/Scripts/jquery-1.8.2.min.js"></script>
         <script src="~/Scripts/jquery-ui-1.8.24.js"></script>
@@ -14,6 +15,8 @@
         <meta name="viewport" content="width=device-width" />
     </head>
     <body>
+        {% include navigation.html %}
+    {{ content }}
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
@@ -21,11 +24,11 @@
                 </div>
                 <div class="float-right">
                     <section id="login">
-                        @if (WebSecurity.IsAuthenticated) {
+                        
                             <text>
-                                Hello, <a class="email" href="~/Account/Manage" title="Manage"></a>!
-                                <form id="logoutForm" action="~/Account/Logout" method="post">
-                                    @AntiForgery.GetHtml()
+                               <a class="email" href="~/Account/Manage" title="Manage"{% if page.url == "/Account.html"></a>
+                                <form id="logoutForm" action="~/Account/Logout" method="post"{% if page.url == "/Account/Logout.html">
+                                   
                                     <a href="javascript:document.getElementById('logoutForm').submit()"></a>
                                 </form>
                             </text>
@@ -41,30 +44,27 @@
         </div>
         <footer>
             <nav>
-                <ul id="menu">
-                            <li><a href="~/"style="font-size: 12px">Startseite</a></li>
-                            <li><a href="~/About"style="font-size: 12px">Info</a></li>
-                            <li><a href="LICENSE"style="font-size: 12px">LICENSE</a></li>
-                            <li><a href="~/Regolamin"style="font-size: 12px">Regolamin</a></li>
-                            <li><a href="~/Contact"style="font-size: 12px">Contakt</a></li>
-                            <li><a href="~/Praca"style="font-size: 12px">Praca</a></li>
-                            <li><a href="~/Forum"style="font-size: 12px">Forum</a></li>
-                            <li><a href="~/Photolio"style="font-size: 12px">Photolio</a></li>
-                            <li><a href="~/Zdjecia"style="font-size: 12px">Fotografia</a></li>
-                            <li><a href="~/termsfeed-html-privacy-policy-english.html.cshtml"style="font-size: 12px">Privacy Policy</a></li>
-                            <li><a href="~/twitter strona.cshtml"style="font-size: 12px">Twitter przegląd</a></li>
-                            <li><a href="~/Endecken"></a></li>
-                            <li><a href="~/Mitteilungen"></a></li>
-                            <li><a href="~/Zakladka"></a></li>
-                            <li><a href="~/strona dla uzytkownika"></a></li>
-                            <li><a href="~/strona po wylogowaniu"></a></li>  
-                        </ul>
+                
+                            
+                            <a href="~/"{% if page.url == "/" %}>Startseite</a>
+                            <a href="~/About"{% if page.url == "/about.html"style="font-size: 12px">Info</a>
+                            <a href="LICENSE"{% if page.url == "/License.html"style="font-size: 12px">LICENSE</a>
+                            <a href="~/Regolamin"{% if page.url == "/Regolamin.html"style="font-size: 12px">Regolamin</a>
+                            <a href="~/Contact"{% if page.url == "/Contact.html"style="font-size: 12px">Contakt</a>
+                            <a href="~/Praca"{% if page.url == "/Praca.html"style="font-size: 12px">Praca</a>
+                            <a href="~/Forum"{% if page.url == "/Forum.html"style="font-size: 12px">Forum</a>
+                            <a href="~/Photolio"{% if page.url == "/Photolio.html"style="font-size: 12px">Photolio</a>
+                            <a href="~/Zdjecia"{% if page.url == "/Zdjecia.html"style="font-size: 12px">Fotografia</a>
+                            <a href="~/termsfeed-html-privacy-policy-english.html.cshtml"{% if page.url == "/privacy policy.html"style="font-size: 12px">Privacy Policy</a>
+                            <a href="~/twitter strona.cshtml"{% if page.url == "/twitter.html"style="font-size: 12px">Twitter przegląd</a>
+                            <a href="~/Endecken"{% if page.url == "/Enddeken.html"></a>
+                            <a href="~/Mitteilungen"{% if page.url == "/Mitteilungen.html"></a>
+                            <a href="~/Zakladka"{% if page.url == "/Zakladka.html"></a>
+                            <a href="~/strona dla uzytkownika"{% if page.url == "/strona dla uzytkownika.html"></a>
+                            <a href="~/strona po wylogowaniu"{% if page.url == "/strona po wylogowaniu.html"></a>  
+                     
                         </nav>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy;2019 - Copyright<img src='http://localhost:7184/ome!pos.pgn.png'alt="..."title="ome!pos" style='width:50px;border-radius: 50px 50px 50px 50px;opacity:0.6'/></p>
-                </div>
-            </div>
+           
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5012968b5be75853" async="async"></script>
 <!-- AddThis Button BEGIN -->
