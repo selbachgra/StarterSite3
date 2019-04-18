@@ -48,23 +48,23 @@
                
                             <a href="~/"{% if page.url == "/"%}style="font-size: 12px">Startseite</a>
                             <a href="~/About"{% if page.url == "/about.html" %}style="font-size: 12px">Info</a>
-                            <a href="~/LICENSE"style="font-size: 12px">LICENSE</a>
+                            <a href="~/LICENSE"{% if page.url == "/License.html" %}style="font-size: 12px">LICENSE</a>
                             <a href="~/Regolamin"style="font-size: 12px">Regolamin</a>
-                            <a href="~/Contact"style="font-size: 12px">Contakt</a>
-                            <a href="~/Praca"style="font-size: 12px">Praca</a>
-                            <a href="~/Forum"style="font-size: 12px">Forum</a>
-                            <a href="~/Photolio"style="font-size: 12px">Photolio</a>
-                            <a href="~/Zdjecia"style="font-size: 12px">Fotografia</a>
+                            <a href="~/Contact"{% if page.url == "/Contact.html" %}style="font-size: 12px">Contakt</a>
+                            <a href="~/Praca"{% if page.url == "/Praca.html" %}style="font-size: 12px">Praca</a>
+                            <a href="~/Forum"{% if page.url == "/Forum.html" %}style="font-size: 12px">Forum</a>
+                            <a href="~/Photolio"{% if page.url == "/Photolio.html" %}style="font-size: 12px">Photolio</a>
+                            <a href="~/Zdjecia"{% if page.url == "/Zdjecia.html" %}style="font-size: 12px">Fotografia</a>
                             <a href="~/termsfeed-html-privacy-policy-english.html.cshtml"style="font-size: 12px">Privacy Policy</a>
                             <a href="~/twitter strona.cshtml"style="font-size: 12px">Twitter przegląd</a>
-                            <a href="~/Endecken"></a>
-                            <a href="~/Mitteilungen"></a>
-                            <a href="~/Zakladka"></a>
-                            <a href="~/strona dla uzytkownika"></a>
-                            <a href="~/strona po wylogowaniu"></a>  
+                            <a href="~/Endecken"{% if page.url == "/Endecken.html" %}></a>
+                            <a href="~/Mitteilungen"{% if page.url == "/Mitteilungen.html" %}></a>
+                            <a href="~/Zakladka"{% if page.url == "/Zakladka.html" %}></a>
+                            <a href="~/strona dla uzytkownika"{% if page.url == "/strona dla uzytkownika.html" %}></a>
+                            <a href="~/strona po wylogowaniu"{% if page.url == "/strona po wylogowaniu.html" %}></a>  
                         
                         </nav>
-            
+             </footer>
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5012968b5be75853" async="async"></script>
 <!-- AddThis Button BEGIN -->
@@ -87,7 +87,7 @@
 <!-- AddThis Button END -->
 <!--Go to www.ad<!-- Go to www.addthis.com/dashboard to customize your tool--><div class="addthis_native_toolbox"></div>
                 </div>
-        </footer>
+       
        
     </body>
 </html>
