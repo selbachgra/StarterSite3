@@ -26,7 +26,7 @@
            
                             <text>
                                  <a class="email" href="~/Account/Manage"{% if page.url == "/Account.html" %} title="Manage"></a>
-                                <form id="logoutForm" action="~/Account/Logout"{% if page.url == "/Acount/Logout.html" %} method="post">
+                                <form id="logoutForm" action="~/Account/Logout"{% if page.url == "/Acount/Logout.html" %} method="post"></a>
                                    
                                     <a href="javascript:document.getElementById('logoutForm').submit()"></a>
                                 </form>
@@ -78,7 +78,7 @@
 </div>               
 <!-- Fügen Sie dieses Tag in den head-Abschnitt oder direkt vor dem schließenden body-Tag ein. -->
 <script src="https://apis.google.com/js/platform.js" async defer>
-  {%lang: 'de'%}
+  {lang: 'de'}
 </script>
 <!-- Fügen Sie dieses Tag an der Stelle ein, an der die +1-Schaltfläche erscheinen soll. -->
 
