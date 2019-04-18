@@ -1,14 +1,16 @@
-﻿@{
-    Layout = "~/_SiteLayout.cshtml";
-    Page.Title = "Konto gesperrt";
-}
-
-<hgroup class="title">
+<!doctype html>
+<head>
+ <meta charset="utf-8">
+    <title>{{ page.title }}</title>
     <h1 class="error">@Page.Title.</h1>
     <h2 class="error">Ihr Konto wurde wegen einer zu hohen Anzahl ungültiger Anmeldeversuche gesperrt.</h2>
-</hgroup>
-
+</head>
+<body>
+     {% include navigation.html %}
+    {{ content }}
 <p>
     Bitte warten, das Konto wird in 60 Sekunden automatisch wieder entsperrt. 
     Wiederholen Sie den Vorgang anschließend.
 </p>
+</body>
+</head>
