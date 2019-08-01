@@ -4,7 +4,7 @@
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 }
 
-@{
+
     Layout = "~/_SiteLayout.cshtml";
     Page.Title = "Anmelden";
 
@@ -17,7 +17,7 @@
     if (returnUrl.IsEmpty()) {
         // Einige externe Anmeldeanbieter erfordern immer einen URL-Rückgabewert.
         returnUrl = Href("~/strona dla uzytkownika");
-    }
+   
 
     // Setup validation
     Validation.RequireField("email", "Sie müssen eine E-Mail-Adresse angeben.");
@@ -58,7 +58,7 @@
 }
 
 <hgroup class="title">
-    <h1>@Page.Title.</h1>
+    <h1>Page.Title.</h1>
 </hgroup>
 
 <section id="loginForm">
