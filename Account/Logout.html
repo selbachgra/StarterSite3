@@ -1,6 +1,6 @@
-﻿@{
+---
     WebSecurity.RequireAuthenticatedUser();
-
+---
     if (IsPost) {
         // Sicherstellen, dass die Anforderung vom Benutzer gesendet wurde.
         AntiForgery.Validate();
