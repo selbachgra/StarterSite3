@@ -1,5 +1,5 @@
-﻿@{
-    Layout = "~/_SiteLayout.cshtml";
+{
+    Layout = "~/_SiteLayout.html";
     Page.Title = "Registration Confirmation Page";
 
     string message = "";
@@ -16,12 +16,12 @@
 }
 
 <hgroup class="title">
-    <h1>@Page.Title.</h1>
+    <h1>Page.Title.</h1>
     <h2>Verwenden Sie das Formular unten, um Ihr Konto zu bestätigen.</h2>
 </hgroup>
 
 @if (!message.IsEmpty()) {
-    <p>@message</p>
+    <p>message</p>
 } else {
     <form method="post">
         <fieldset>
